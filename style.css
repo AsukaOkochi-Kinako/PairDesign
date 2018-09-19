@@ -153,6 +153,32 @@ h4 {
     margin: 2rem auto;
 }
 
+.access__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 45rem;
+    margin-bottom: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.access__contents--map {
+    display: block;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.access__contents iframe {
+    height: 22rem;
+    border-radius: 30rem;
+}
+
+.access__contents--text p {
+    text-align: left;
+}
 
 #footer {
     background-color: #81BEC1;
@@ -180,5 +206,15 @@ h4 {
     .concept__circle {
         width: 23rem;
         height: 23rem;
+    }
+    .access__contents {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 80vw;
+    }
+    .access__contents--text p {
+        text-align: center;
     }
 }
