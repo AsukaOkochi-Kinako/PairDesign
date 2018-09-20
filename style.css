@@ -43,7 +43,7 @@ hr {
 
 h2 {
     font-size: 2rem;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 h3 {
@@ -193,7 +193,7 @@ h4 {
 
 @media (max-width:768px) {
     #top {
-        height: 85vh;
+        height: 90vh;
     }
     .menu__contents {
         width: 20rem;
