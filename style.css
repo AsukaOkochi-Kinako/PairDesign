@@ -13,10 +13,19 @@ a {
 }
 
 hr {
+    width: 100vw;
+    height: 30px;
+    background-image: url(imgs/border.png);
+    background-repeat: repeat-x;
+    background-size: 3.5rem;
+    border: none;
+
+    /*
     border-style: solid;
     border-width: 0px 0px 18px;
     -o-border-image: url(imgs/border.png) 50 0 round;
     border-image: url(imgs/border.png) 50 0 fill round;
+    */
 }
 
 #top {
@@ -72,6 +81,10 @@ h4 {
     position: relative;
     bottom: 2rem;
     border-radius: 50%;
+}
+
+.menu__nav i {
+    padding-top: 0.5rem;
 }
 
 #menu h2 {
@@ -189,14 +202,14 @@ h4 {
     padding: 1rem 0;
 }
 
-/*スマホ*/
+/*タブレット*/
 
 @media (max-width:768px) {
     #top {
         height: 90vh;
     }
     .menu__contents {
-        width: 20rem;
+        width: 80vw;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -209,23 +222,23 @@ h4 {
     .menu__content {
         margin: 1rem auto;
     }
-
-    .concept__circle--contentline {
-        background-repeat: repeat-x;
-    }
-
-    .concept__circle {
-        width: 23rem;
-        height: 23rem;
-    }
     .access__contents {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        width: 80vw;
+        width: 85vw;
     }
     .access__contents--text p {
         text-align: center;
     }
+}
+
+@media (max-width:425px) {
+    .concept__circle {
+        width: 85vw;
+        height: 85vw;
+    }
+}
+
 }
