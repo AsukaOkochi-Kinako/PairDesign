@@ -188,7 +188,13 @@ h4 {
     background-color: #81BEC1;
     color: #fff;
     width: 13rem;
-    margin: 1rem auto;
+    margin: 1rem 0;
+    transition: 0.5s;
+}
+
+.access__btn--instagram:hover {
+    transition: 0.5s;
+    opacity: 0.5;
 }
 
 .access__btn--content {
@@ -197,6 +203,7 @@ h4 {
     width: 11rem;
     justify-content: space-between;
 }
+
 
 .fa-instagram {
     font-size: 2.5rem;
@@ -258,6 +265,9 @@ h4 {
         -ms-flex-direction: column;
         flex-direction: column;
         width: 85vw;
+    }
+    .access__btn--instagram {
+        margin: 1rem auto;
     }
     .access__contents--text p {
         text-align: center;
