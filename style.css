@@ -31,13 +31,18 @@ hr {
 #top {
     width: 100vw;
     height: 95vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     background-image: url(imgs/top_bg.JPG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.top__wrap {
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
