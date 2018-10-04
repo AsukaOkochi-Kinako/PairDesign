@@ -4,7 +4,7 @@
     padding: 0;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-
+    word-break: keep-all;
 }
 
 a {
@@ -26,6 +26,10 @@ hr {
     -o-border-image: url(imgs/border.png) 50 0 round;
     border-image: url(imgs/border.png) 50 0 fill round;
     */
+}
+
+#nav__list {
+    display: none;
 }
 
 #top {
@@ -96,7 +100,10 @@ h4 {
     color: #fff;
 }
 
-.menu__contents {
+
+
+.menu__contents,
+.menu__more--contents {
     width: 45rem;
     padding: 2rem 0;
     display: -webkit-box;
@@ -108,7 +115,6 @@ h4 {
 }
 
 .menu__content {
-    background-image: url(imgs/food1.JPG);
     background-position: center;
     background-size: cover;
     width: 13rem;
@@ -117,6 +123,30 @@ h4 {
     margin: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+
+.menu__content:nth-child(1) {
+    background-image: url(imgs/food2.JPG);
+}
+
+.menu__content:nth-child(2) {
+    background-image: url(imgs/food1.JPG);
+}
+
+.menu__content:nth-child(3) {
+    background-image: url(imgs/food3.JPG);
+}
+
+.menu__more--contents .menu__content:nth-child(1) {
+    background-image: url(imgs/food4.JPG);
+}
+
+.menu__more--contents .menu__content:nth-child(2) {
+    background-image: url(imgs/food5.JPG);
+}
+
+.menu__more--contents .menu__content:nth-child(3) {
+    background-image: url(imgs/food6.JPG);
 }
 
 .menu__more--button {
@@ -134,6 +164,7 @@ h4 {
 .menu__more--button:hover {
     background-color: #fff;
     color: #81BEC1;
+    cursor: pointer;
 }
 
 .concept-bg {
@@ -186,7 +217,11 @@ h4 {
 }
 
 .access__btn--instagram {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 0.75rem;
     height: 4rem;
@@ -194,18 +229,26 @@ h4 {
     color: #fff;
     width: 13rem;
     margin: 1rem 0;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
 .access__btn--instagram:hover {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     opacity: 0.5;
 }
 
 .access__btn--content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 11rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -284,6 +327,6 @@ h4 {
         width: 85vw;
         height: 85vw;
     }
-}
+
 
 }

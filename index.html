@@ -33,6 +33,16 @@
 
     <script>
         $(function() {
+            // もっと見るボタン
+            $('.menu__more--button').nextAll('.menu__more--button').css('display', 'none'); //ボタンを非表示
+
+            $('.menu__more--contents').css('display', 'none');
+            $('.menu__more--button').on('click', function() {
+                $(this).css('display', 'none'); //押したボタンを非表示
+                $('.menu__more--contents').css('display', 'flex');
+                $(this).find('.menu__more--contents').slideToggle();
+            });
+
             // #で始まるアンカーをクリックした場合に処理
             $('a[href^="#"]').click(function() {
                 // スクロールの速度
@@ -51,10 +61,23 @@
             });
         });
     </script>
+
 </head>
 
 <body>
     <div id="top">
+        <!--ナビ-->
+        <div class="nav__button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="nav__list">
+            <span><a href="#menu">MENU</a></span>
+            <span><a href="#concept">CONCEPT</a></span>
+            <span><a href="#access">ACCESS</a></span>
+        </div>
+
         <div class="top__wrap"><img src="imgs/logo.svg" alt="せとCafe">
         </div>
     </div>
@@ -68,15 +91,15 @@
             <div class="menu__content"></div>
             <div class="menu__content"></div>
         </div>
-        <a class="menu__more--button" href="#">＋もっと見る</a>
-        <!--
-<div class="menu__contents menu__more--contents">
-    <div class="menu__content"></div>
-    <div class="menu__content"></div>
-    <div class="menu__content"></div>
-</div>
--->
+        <div class="menu__more--contents">
+            <div class="menu__content"></div>
+            <div class="menu__content"></div>
+            <div class="menu__content"></div>
+        </div>
+        <div class="menu__more--button">＋もっと見る</div>
+
     </div>
+
     <div id="concept" class="concept-bg">
         <h2>CONCEPT</h2>
     </div>
@@ -85,10 +108,7 @@
         <div class="concept__circle--content">
             <h3>瀬戸内×瀬戸物</h3>
             <h4><span class="concept__circle--contentline">セトでつながる美味しい時間。</span></h4>
-            <p>”セト”でランチタイムを暖かくしましょう。<br> 瀬戸内産にこだわった野菜や果物たちと
-                <br> こだわって作られた瀬戸物のコラボレーション。
-                <br> こだわり同士が合わさることで
-                <br> 素敵なランチタイムが生まれます。
+            <p>”セト”でランチタイムを暖かくしましょう。 瀬戸内産にこだわった野菜や果物たちと こだわって作られた瀬戸物のコラボレーション。 こだわり同士が合わさることで 素敵なランチタイムが生まれます。
             </p>
         </div>
     </div>
