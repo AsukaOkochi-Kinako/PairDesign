@@ -68,7 +68,14 @@
                 // ナビのリストの動き
                 $('.nav__list').toggleClass('open');
             });
+
+            //ナビのボタン押したら
+            $('.nav__list--btn').click(function() {
+                $('.nav__list').toggleClass('open');
+            });
+
         });
+
     </script>
 
 </head>
@@ -82,9 +89,9 @@
             <span></span>
         </a>
         <div class="nav__list">
-            <span><a href="#menu">MENU</a></span>
-            <span><a href="#concept">CONCEPT</a></span>
-            <span><a href="#access">ACCESS</a></span>
+            <span><a class="nav__list--btn" href="#menu">MENU</a></span>
+            <span><a class="nav__list--btn" href="#concept">CONCEPT</a></span>
+            <span><a class="nav__list--btn" href="#access">ACCESS</a></span>
         </div>
 
         <div class="top__wrap"><img src="imgs/logo.svg" alt="せとCafe">
