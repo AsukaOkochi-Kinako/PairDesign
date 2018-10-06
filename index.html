@@ -59,6 +59,15 @@
                 }, speed, 'swing');
                 return false;
             });
+
+            // ナビ押したら
+            $('.nav__button').click(function() {
+                // ハンバーガーの動き
+                $(this).toggleClass('open');
+
+                // ナビのリストの動き
+                $('.nav__list').toggleClass('open');
+            });
         });
     </script>
 
@@ -67,12 +76,12 @@
 <body>
     <div id="top">
         <!--ナビ-->
-        <div class="nav__button">
+        <a class="nav__button" href="#">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <div id="nav__list">
+        </a>
+        <div class="nav__list">
             <span><a href="#menu">MENU</a></span>
             <span><a href="#concept">CONCEPT</a></span>
             <span><a href="#access">ACCESS</a></span>
