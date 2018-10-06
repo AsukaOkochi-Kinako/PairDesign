@@ -101,6 +101,18 @@ hr {
     transition-duration: 0.5s;
 }
 
+.nav__list--btn {
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.nav__list--btn:hover {
+    color: #FFFFA4;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
 .nav__list.open {
     right: 0;
     -webkit-transition-duration: 0.5s;
