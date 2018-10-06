@@ -100,8 +100,6 @@ h4 {
     color: #fff;
 }
 
-
-
 .menu__contents,
 .menu__more--contents {
     width: 45rem;
@@ -112,11 +110,20 @@ h4 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .menu__content {
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.menu__content img {
+    -o-object-fit: cover;
+    object-fit: cover;
     width: 13rem;
     height: 13rem;
     border-radius: 50%;
@@ -125,28 +132,33 @@ h4 {
     transition: 0.5s;
 }
 
-.menu__content:nth-child(1) {
-    background-image: url(imgs/food2.JPG);
+.menu__content--mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    color: #81BEC1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: 0.5s;
+    border-radius: 50%;
 }
 
-.menu__content:nth-child(2) {
-    background-image: url(imgs/food1.JPG);
-}
-
-.menu__content:nth-child(3) {
-    background-image: url(imgs/food3.JPG);
-}
-
-.menu__more--contents .menu__content:nth-child(1) {
-    background-image: url(imgs/food4.JPG);
-}
-
-.menu__more--contents .menu__content:nth-child(2) {
-    background-image: url(imgs/food5.JPG);
-}
-
-.menu__more--contents .menu__content:nth-child(3) {
-    background-image: url(imgs/food6.JPG);
+.menu__content:hover .menu__content--mask {
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .menu__more--button {
