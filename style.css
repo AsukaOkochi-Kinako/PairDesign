@@ -92,7 +92,7 @@ hr {
     -ms-flex-direction: column;
     flex-direction: column;
     height: 90vh;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     font-size: 2rem;
     -webkit-transition-duration: 0.5s;
